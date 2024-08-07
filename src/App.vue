@@ -1,7 +1,11 @@
 <template>
-  <h1 class="text-red-500">Hola</h1>
+  <div class="p-5">
+  </div>
+
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import sideBar from './components/sideBar.vue';
+</script>
 
 <style></style>
