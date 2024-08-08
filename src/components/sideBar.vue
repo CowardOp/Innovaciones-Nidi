@@ -81,7 +81,14 @@ aside.expand .button .icon {
 
 }
 
-aside.expand .menu .button {
+aside.expand .menu .button:first-of-type .icon,
+aside.expand .menu .button:nth-of-type(3) .icon,
+aside.expand .menu .button:nth-of-type(5) .icon {
+    animation: none;
+}
+
+aside.expand .menu .button:nth-of-type(2) .icon,
+aside.expand .menu .button:nth-of-type(4) .icon {
     animation: none;
 }
 
@@ -114,14 +121,14 @@ h3,
     transition: opacity 200ms ease-in-out;
 }
 
-.menu .button:first-of-type .icon,
-.menu .button:nth-of-type(3) .icon,
-.menu .button:nth-of-type(5) .icon {
+.menu .button:first-of-type .icon:hover,
+.menu .button:nth-of-type(3) .icon:hover,
+.menu .button:nth-of-type(5) .icon:hover {
     animation: bounce 0.5s infinite alternate;
 }
 
-.menu .button:nth-of-type(2) .icon,
-.menu .button:nth-of-type(4) .icon {
+.menu .button:nth-of-type(2) .icon:hover,
+.menu .button:nth-of-type(4) .icon:hover {
     animation: bounce 0.5s infinite reverse;
 }
 
