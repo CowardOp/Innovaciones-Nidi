@@ -1,10 +1,14 @@
 <template>
-  <div class="p-5">
+
+  <div>
+    <sideBar />
+    <RouterView />
   </div>
 
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import { RouterView, RouterLink } from 'vue-router'
 import sideBar from './components/sideBar.vue';
 </script>
 
