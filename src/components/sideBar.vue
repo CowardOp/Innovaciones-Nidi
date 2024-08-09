@@ -63,7 +63,7 @@ const toggleMenu = (): void => {
 
 <style scoped>
 aside {
-    right: 0;
+
     width: calc(2rem + 32px);
     transition: 0.2s ease-in-out;
 }
