@@ -18,20 +18,23 @@
                 <span class="icon"><i class="fa-solid fa-house-heart text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Inicio</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+            <RouterLink to="/peinados"
+                class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
                 <span class="icon"><i class="fa-solid fa-user-hair-buns text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Peinados</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1.4rem] gap-3 h-[60px] xl:h-[70px]">
+            <RouterLink to="/color" class="button flex items-center py-[0.5rem] px-[1.4rem] gap-3 h-[60px] xl:h-[70px]">
                 <span class="icon"><i class="fa-solid fa-droplet text-3xl xl:text-4xl rain"></i></span>
                 <span class="text lovers text-[4rem]">Color</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+            <RouterLink to="/manicure"
+                class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
                 <span class="icon"><i
                         class="fa-solid fa-hand-holding-heart text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Manicure</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+            <RouterLink to="/barberia"
+                class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
                 <span class="icon"><i
                         class="fa-duotone fa-solid fa-mustache text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Barberia</span>
