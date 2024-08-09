@@ -1,10 +1,10 @@
 <template>
     <aside :class="`${expand ? 'expand' : ''}`"
-        class="bg-[#B4D6CD] h-full absolute flex flex-col overflow-hidden top-0 p-4 min-h-screen z-10">
+        class="bg-[#B4D6CD] h-[100vh] absolute flex flex-col overflow-hidden top-0 p-4 min-h-screen z-10">
         <div class="mb-4 flex justify-center">
             <img v-if="show" :src="logoURL" alt="InnovacionesNidiLogo" class="bg-white rounded w-8"
                 :class="`${turn ? 'turn' : ''}`" @click="turnIn">
-            <img v-else :src="imgURL" alt="InnovacionesNidiLogo" class="w-[250px] bg-[#40534C] rounded">
+            <img v-else :src="imgURL" alt="InnovacionesNidiLogo" class=" w-[200px] xl:w-[250px] bg-[#40534C] rounded">
         </div>
         <div class="flex flex-end mb-4 relative hola">
             <button @click="toggleMenu" class="menu-toggle ">
@@ -12,26 +12,28 @@
                 <span v-else class="icon "><i class="fa-solid fa-arrow-right-to-line text-[#1A3636]"></i></span>
             </button>
         </div>
-        <h3 class="lovers text-[4rem] text-center">Menu</h3>
+        <h3 class="lovers text-xl lg:text-[4rem] text-center pb-2">Menu</h3>
         <div class="menu my-0 mx-[-1rem]">
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[70px]">
-                <span class="icon"><i class="fa-solid fa-house-heart text-4xl text-[#1A3636]"></i></span>
+            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+                <span class="icon"><i class="fa-solid fa-house-heart text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="lovers text-[4rem]">Inicio</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[70px]">
-                <span class="icon"><i class="fa-solid fa-user-hair-buns text-4xl text-[#1A3636]"></i></span>
+            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+                <span class="icon"><i class="fa-solid fa-user-hair-buns text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Peinados</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1.4rem] gap-3 h-[70px]">
-                <span class="icon"><i class="fa-solid fa-droplet text-4xl text-[#1A3636]"></i></span>
+            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1.4rem] gap-3 h-[60px] xl:h-[70px]">
+                <span class="icon"><i class="fa-solid fa-droplet text-3xl xl:text-4xl rain"></i></span>
                 <span class="text lovers text-[4rem]">Color</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[70px]">
-                <span class="icon"><i class="fa-solid fa-hand-holding-heart text-4xl text-[#1A3636]"></i></span>
+            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+                <span class="icon"><i
+                        class="fa-solid fa-hand-holding-heart text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Manicure</span>
             </RouterLink>
-            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[70px]">
-                <span class="icon"><i class="fa-duotone fa-solid fa-mustache text-4xl text-[#1A3636]"></i></span>
+            <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
+                <span class="icon"><i
+                        class="fa-duotone fa-solid fa-mustache text-3xl xl:text-4xl text-[#1A3636]"></i></span>
                 <span class="text lovers text-[4rem]">Barberia</span>
             </RouterLink>
         </div>
@@ -81,6 +83,10 @@ aside.expand .button .icon {
 
 }
 
+aside.expand .menu-toggle:hover .icon i {
+    transform: translateX(0.5rem);
+}
+
 aside.expand .menu .button:first-of-type .icon,
 aside.expand .menu .button:nth-of-type(3) .icon,
 aside.expand .menu .button:nth-of-type(5) .icon {
@@ -122,14 +128,17 @@ h3,
 }
 
 .menu .button:first-of-type .icon:hover,
-.menu .button:nth-of-type(3) .icon:hover,
-.menu .button:nth-of-type(5) .icon:hover {
+.menu .button:nth-of-type(3) .icon:hover {
     animation: bounce 0.5s infinite alternate;
 }
 
 .menu .button:nth-of-type(2) .icon:hover,
 .menu .button:nth-of-type(4) .icon:hover {
     animation: bounce 0.5s infinite reverse;
+}
+
+.menu .button:nth-of-type(5) .icon:hover {
+    animation: rotate 0.3s infinite alternate;
 }
 
 .button {
@@ -140,7 +149,11 @@ h3,
 
     animation: bounce 0.5s infinite alternate;
 } */
+.rain {
+    color: #F6E96B;
 
+    animation: rainbow 2s infinite;
+}
 
 @keyframes bounce {
 
@@ -153,6 +166,30 @@ h3,
     50% {
         transform: translateY(-3px);
         /* Punto más alto del brinco */
+    }
+}
+
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
     }
 }
 </style>
