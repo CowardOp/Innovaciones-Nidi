@@ -16,7 +16,7 @@
         <div class="menu my-0 mx-[-1rem]">
             <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
                 <span class="icon"><i class="fa-solid fa-house-heart text-3xl xl:text-4xl text-[#1A3636]"></i></span>
-                <span class="lovers text-[4rem]">Inicio</span>
+                <span class="text lovers text-[4rem]">Inicio</span>
             </RouterLink>
             <RouterLink to="/" class="button flex items-center py-[0.5rem] px-[1rem] gap-3 h-[60px] xl:h-[70px]">
                 <span class="icon"><i class="fa-solid fa-user-hair-buns text-3xl xl:text-4xl text-[#1A3636]"></i></span>
