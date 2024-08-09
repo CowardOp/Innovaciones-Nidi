@@ -111,6 +111,10 @@ img.turn {
     transition: 0.2s ease-in;
 }
 
+.menu-toggle:nth-of-type(1) {
+    transform: rotate(180deg);
+}
+
 .menu-toggle .icon {
     font-size: 2rem;
     transition: 0.2s ease-out;
