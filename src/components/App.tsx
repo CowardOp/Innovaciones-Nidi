@@ -1,12 +1,11 @@
 import { NavBar } from "./NavBar";
 import "./App.css";
-import pollo from "../../src/assets/img/pollo.png";
-import audioPollo from "../assets/img/gallina.mp3";
-import { useRef } from "react";
+
 import { Footer } from "./Footer";
+import { Main } from "./Main";
 
 function App() {
-  const list = ["Sobre Nosotros", "Contactos", "About"];
+  const list = ["Sobre Nosotros", "Contactos", "Contactos"];
   const subList = [
     "Corte",
     "Peinados",
@@ -17,17 +16,11 @@ function App() {
     "Keratina",
   ];
 
-  const audioRef = useRef(new Audio(audioPollo));
-
-  const playSound = () => {
-    audioRef.current.play();
-  };
-
   return (
     <>
-      <div className="w-full h-screen bg-white">
+      <div className="w-full h-full bg-white">
         <NavBar data={list} subData={subList} />
-        <img src={pollo} alt="" className="" onClick={playSound} />
+        <Main />
         <Footer />
       </div>
     </>

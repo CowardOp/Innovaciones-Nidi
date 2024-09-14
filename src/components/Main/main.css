@@ -1,0 +1,46 @@
+.icono {
+  cursor: pointer;
+  background-color: #c9686866;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  font-size: 2rem;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3px;
+  border-radius: 50px;
+
+  transition: all 0.3s linear;
+}
+
+.icono .icono_i {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.icono .icono_i_dos {
+  position: absolute;
+
+  opacity: 0;
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+}
+
+.move {
+  transform: translateX(-120px);
+}
+
+.move .icono_i {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+.move .icono_i {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.imagen {
+  width: 25%;
+  transform: rotate(360deg);
+}

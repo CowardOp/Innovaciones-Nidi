@@ -6,10 +6,10 @@ type Props = {
 const NavBar = ({ data, subData }: Props) => {
   return (
     <>
-      <div className="navbar bg-white text-black shadow-lg p-px">
+      <div className="navbar bg-white text-black">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -27,17 +27,17 @@ const NavBar = ({ data, subData }: Props) => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
             >
               {data.map((item) => (
-                <li className="text-white" key={item}>
+                <li key={item}>
                   <a>{item}</a>
                 </li>
               ))}
               <li>
-                <details className="text-white">
+                <details>
                   <summary>Servicios</summary>
-                  <ul className="p-px">
+                  <ul className="p-2">
                     {subData.map((item) => (
                       <li key={item}>
                         <a href="">{item}</a>
@@ -51,7 +51,7 @@ const NavBar = ({ data, subData }: Props) => {
           <a className="btn btn-ghost text-xl">Innovaciones Nidi</a>
         </div>
 
-        <div className="navbar-center hidden md:flex ">
+        <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">
             {data.map((item) => (
               <li key={item}>
@@ -59,11 +59,11 @@ const NavBar = ({ data, subData }: Props) => {
               </li>
             ))}
             <li>
-              <details className="mt-2">
+              <details>
                 <summary>Servicios</summary>
-                <ul className="px-2 py-px">
+                <ul className="p-2 text-white">
                   {subData.map((item) => (
-                    <li className="text-white" key={item}>
+                    <li key={item}>
                       <a href="">{item}</a>
                     </li>
                   ))}
