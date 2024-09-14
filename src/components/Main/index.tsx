@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./main.css";
-import Flower from "../Flower";
 const Main = () => {
   const [moved, setMove] = useState(false);
 
@@ -18,9 +17,7 @@ const Main = () => {
             className={`icono_i fa-solid fa-arrow-left`}
           ></i>
         </div>
-        <div>
-          <Flower />
-        </div>
+        <div></div>
       </div>
     </>
   );
