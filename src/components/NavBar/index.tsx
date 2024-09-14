@@ -6,11 +6,7 @@ type Props = {
 const NavBar = ({ data, subData }: Props) => {
   return (
     <>
-<<<<<<< HEAD
-      <div className="navbar bg-white text-black">
-=======
-      <div className="navbar bg-white text-black shadow-lg">
->>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
+      <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,74 +27,48 @@ const NavBar = ({ data, subData }: Props) => {
             </div>
             <ul
               tabIndex={0}
-<<<<<<< HEAD
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
-            >
-              {data.map((item) => (
-                <li key={item}>
-=======
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {data.map((item) => (
-                <li className="text-white" key={item}>
->>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
-                  <a>{item}</a>
-                </li>
-              ))}
               <li>
-<<<<<<< HEAD
-                <details>
-=======
-                <details className="text-white">
->>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
-                  <summary>Servicios</summary>
-                  <ul className="p-2">
-                    {subData.map((item) => (
-                      <li key={item}>
-                        <a href="">{item}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Parent</a>
+                <ul className="p-2">
+                  <li>
+                    <a>Submenu 1</a>
+                  </li>
+                  <li>
+                    <a>Submenu 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>Item 3</a>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Innovaciones Nidi</a>
+          <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
-
-        <div className="navbar-center hidden lg:flex ">
+        <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {data.map((item) => (
-              <li key={item}>
-                <a>{item}</a>
-              </li>
+              <li key={item}>{item}</li>
             ))}
             <li>
               <details>
-                <summary>Servicios</summary>
-<<<<<<< HEAD
-                <ul className="p-2 text-white">
-                  {subData.map((item) => (
-                    <li key={item}>
-=======
+                <summary>Parent</summary>
                 <ul className="p-2">
                   {subData.map((item) => (
-                    <li className="text-white" key={item}>
->>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
-                      <a href="">{item}</a>
-                    </li>
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
               </details>
             </li>
           </ul>
         </div>
-        <div className="navbar-end pe-2 gap-2">
-          <a className="btn btn-sm btn-secondary btn-outline">Iniciar Sesion</a>
-          <a className="btn btn-sm btn-secondary btn-outline">Registrase</a>
-          <a className="btn btn-sm btn-secondary btn-outline">
-            <i className="fa-duotone fa-solid fa-right-from-bracket"></i>
-          </a>
+        <div className="navbar-end">
+          <a className="btn">Button</a>
         </div>
       </div>
     </>
