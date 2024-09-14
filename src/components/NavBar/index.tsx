@@ -6,7 +6,11 @@ type Props = {
 const NavBar = ({ data, subData }: Props) => {
   return (
     <>
+<<<<<<< HEAD
       <div className="navbar bg-white text-black">
+=======
+      <div className="navbar bg-white text-black shadow-lg">
+>>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,15 +31,26 @@ const NavBar = ({ data, subData }: Props) => {
             </div>
             <ul
               tabIndex={0}
+<<<<<<< HEAD
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
             >
               {data.map((item) => (
                 <li key={item}>
+=======
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              {data.map((item) => (
+                <li className="text-white" key={item}>
+>>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
                   <a>{item}</a>
                 </li>
               ))}
               <li>
+<<<<<<< HEAD
                 <details>
+=======
+                <details className="text-white">
+>>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
                   <summary>Servicios</summary>
                   <ul className="p-2">
                     {subData.map((item) => (
@@ -61,9 +76,15 @@ const NavBar = ({ data, subData }: Props) => {
             <li>
               <details>
                 <summary>Servicios</summary>
+<<<<<<< HEAD
                 <ul className="p-2 text-white">
                   {subData.map((item) => (
                     <li key={item}>
+=======
+                <ul className="p-2">
+                  {subData.map((item) => (
+                    <li className="text-white" key={item}>
+>>>>>>> bce6eefcdd7a21e11f9b6511d96bc7047f301c73
                       <a href="">{item}</a>
                     </li>
                   ))}
