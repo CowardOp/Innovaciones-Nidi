@@ -29,22 +29,22 @@ const NavBar = ({ data, subData }: Props) => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
+              {data.map((item) => (
+                <li key={item}>
+                  <a href="">{item}</a>
+                </li>
+              ))}
               <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
+                <details>
+                  <summary>Servicios</summary>
+                  <ul className="p-2">
+                    {subData.map((subItem) => (
+                      <li key={subItem}>
+                        <a href="">{subItem}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               </li>
             </ul>
           </div>
@@ -53,14 +53,18 @@ const NavBar = ({ data, subData }: Props) => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {data.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item}>
+                <a href="">{item}</a>
+              </li>
             ))}
             <li>
               <details>
-                <summary>Parent</summary>
+                <summary>Servicios</summary>
                 <ul className="p-2">
-                  {subData.map((item) => (
-                    <li key={item}>{item}</li>
+                  {subData.map((subItem) => (
+                    <li key={subItem}>
+                      <a href="">{subItem}</a>
+                    </li>
                   ))}
                 </ul>
               </details>

@@ -5,7 +5,7 @@ import { Footer } from "./Footer";
 import { Main } from "./Main";
 
 function App() {
-  const list = ["Sobre Nosotros", "Contactos", "Contactos"];
+  const list = ["Sobre Nosotros", "Contactos", "Productos"];
   const subList = [
     "Corte",
     "Peinados",
@@ -17,7 +17,7 @@ function App() {
   ];
   return (
     <>
-      <NavBar data={list} subData={subList}/>
+      <NavBar data={list} subData={subList} />
       <Main />
       <Footer />
     </>
