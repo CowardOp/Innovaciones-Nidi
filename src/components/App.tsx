@@ -1,8 +1,7 @@
 import { NavBar } from "./NavBar";
-import "./App.css";
-
-import { Footer } from "./Footer";
+// import { Footer } from "./Footer";
 import { Main } from "./Main";
+import "./App.css";
 
 function App() {
   const list = ["Sobre Nosotros", "Contactos", "Productos"];
@@ -19,7 +18,7 @@ function App() {
     <>
       <NavBar data={list} subData={subList} />
       <Main />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

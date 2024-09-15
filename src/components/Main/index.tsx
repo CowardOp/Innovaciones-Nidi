@@ -1,23 +1,18 @@
-import { useState } from "react";
+import Aside from "../Aside/index.";
 import "./main.css";
+
 const Main = () => {
-  const [moved, setMove] = useState(false);
-
-  const moveOnClick = () => {
-    setMove(!moved);
-  };
-
   return (
     <>
-      <div className="w-full">
-        <div onClick={moveOnClick} className={`icono ${moved ? "move" : ""}`}>
-          <i className="icono_i_dos fa-solid fa-arrow-right"></i>
-          <i
-            onClick={moveOnClick}
-            className={`icono_i fa-solid fa-arrow-left`}
-          ></i>
+      <Aside />
+      <div className="w-full h-full">
+        <div>
+          <img
+            className="imagen"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_KwHPCjYSQPF5XuWCzXO2-4A2YXEvkmHVw&s"
+            alt="shampoo"
+          />
         </div>
-        <div></div>
       </div>
     </>
   );

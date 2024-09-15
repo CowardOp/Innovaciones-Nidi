@@ -1,0 +1,43 @@
+.aside {
+  right: -205px;
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  padding: 5px 5px;
+
+  transition: all 0.5s linear;
+}
+
+.icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #8967b360;
+  color: #000;
+  z-index: 1000;
+  cursor: pointer;
+
+  transition: all 0.5s linear;
+}
+
+.icono_i {
+  font-size: 1.5rem;
+
+  transition: all 0.5s linear;
+}
+
+.move .icono_i {
+  transform: rotate(-180deg);
+}
+
+.aside .move {
+  right: 250px;
+}
+
+.move {
+  transform: translateX(-205px);
+}
