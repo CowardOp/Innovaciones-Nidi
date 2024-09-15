@@ -1,10 +1,16 @@
 import Aside from "../Aside/index.";
 import "./main.css";
-
 const Main = () => {
+  const list = ["Corte", "Peinados", "Color", "Manicure"];
+  const classList = [
+    "fa-thin fa-scissors",
+    "fa-regular fa-user-hair-buns",
+    "fa-solid fa-pen-paintbrush",
+    "fa-solid fa-hand",
+  ];
   return (
     <>
-      <Aside />
+      <Aside data={list} clase={classList} />
       <div className="w-full h-full">
         <div>
           <img

@@ -1,7 +1,12 @@
 import { useState } from "react";
 import "./Aside.css";
 
-const Aside = () => {
+interface Props {
+  data: string[];
+  clase: string[];
+}
+
+const Aside = ({ data, clase }: Props) => {
   const [moved, setMoved] = useState(false);
 
   const moveOnClick = () => {
@@ -17,6 +22,15 @@ const Aside = () => {
           ></i>
         </button>
         <h1>Innovaciones Nidi</h1>
+        <ul className="text-black">
+          {data.map((item, i) => (
+            <li key={i}>
+              <a href="">
+                <i className={clase[i]}></i> {item}
+              </a>
+            </li>
+          ))}
+        </ul>
       </aside>
     </>
   );
