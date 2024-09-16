@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 5px;
   right: -200px;
   position: absolute;
   width: 250px;
@@ -59,7 +59,7 @@
   padding: 2px 15px;
   font-family: "Qwigley", cursive;
   text-align: right;
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 45px;
   opacity: 0;
 

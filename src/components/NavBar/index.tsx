@@ -82,7 +82,7 @@ const NavBar = ({ data, subData }: Props) => {
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-primary text-lg m-1"
+              className="btn btn-primary btn-sm text-lg m-1 text-white"
             >
               <i className="fa-regular fa-person-to-portal" />
             </div>
@@ -101,7 +101,7 @@ const NavBar = ({ data, subData }: Props) => {
                 </a>
               </li>
               <li>
-                <a className="btn btn-sm btn-outline btn-primary text-lg">
+                <a className="btn btn-sm btn-outline btn-primary text-lg w-14">
                   <i className="fa-regular fa-right-from-bracket"></i>
                 </a>
               </li>
