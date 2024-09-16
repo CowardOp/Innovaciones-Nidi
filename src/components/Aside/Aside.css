@@ -1,33 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Qwigley&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Qwigley&display=swap");
 .aside {
-  right: -205px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  right: -200px;
   position: absolute;
   width: 250px;
   height: 100vh;
-  background: #fff;
+  background: #624e88;
   padding: 5px 5px;
+  /* z-index: -1; */
 
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
+}
+.lista_icono {
+  width: 40px;
+  background-color: #8967b3;
+  border-radius: 3px;
+  padding: 3px 4px;
+
+  transition: all 0.3s ease;
+}
+
+.lista_icono:hover {
+  background-color: #c68fe6;
+}
+
+.move .lista_icono {
+  width: 100%;
 }
 
 .icono {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 4px;
-  background-color: #8967b360;
+  background-color: #8967b370;
   color: #000;
   z-index: 1000;
   cursor: pointer;
 
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
+}
+
+.icono:hover {
+  background-color: #c68fe6;
+}
+
+.icono:active {
+  transform: scale(0.7);
+}
+
+.nombre_icono {
+  padding: 2px 15px;
+  font-family: "Qwigley", cursive;
+  text-align: right;
+  font-size: 4rem;
+  line-height: 45px;
+  opacity: 0;
+
+  transition: all 0.3s linear;
+}
+
+.move .nombre_icono {
+  opacity: 1;
+}
+.logo_icon {
+  left: 5px;
+  width: 40px;
+  position: absolute;
+  opacity: 1;
+  background-color: #8967b3;
+  border-radius: 5px;
+
+  transition: all 0.3s linear;
+}
+
+.move .logo_icon {
+  opacity: 0;
+}
+
+.logo_gif {
+  opacity: 0;
+
+  transition: all 0.3s linear;
+}
+.move .logo_gif {
+  opacity: 1;
 }
 
 .icono_i {
   font-size: 1.5rem;
 
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 
 .move .icono_i {
@@ -40,4 +109,28 @@
 
 .move {
   transform: translateX(-205px);
+}
+
+.imagen_icono {
+  width: 35px;
+
+  transition: all 0.3s ease-in;
+}
+
+.move .imagen_icono {
+  width: 55px;
+}
+
+.texto_icono {
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 0;
+  opacity: 0;
+
+  transition: all 0.2s ease-in;
+}
+
+.move .texto_icono {
+  opacity: 1;
 }

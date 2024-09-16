@@ -1,3 +1,5 @@
+import "./navBar.css";
+
 type Props = {
   data: string[];
   subData: string[];
@@ -6,7 +8,7 @@ type Props = {
 const NavBar = ({ data, subData }: Props) => {
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-gray-100 text-black">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,20 +29,24 @@ const NavBar = ({ data, subData }: Props) => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-gray-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               {data.map((item) => (
                 <li key={item}>
-                  <a href="">{item}</a>
+                  <a href="" className="text-lg">
+                    {item}
+                  </a>
                 </li>
               ))}
               <li>
                 <details>
-                  <summary>Servicios</summary>
+                  <summary className="text-lg">Servicios</summary>
                   <ul className="p-2">
                     {subData.map((subItem) => (
                       <li key={subItem}>
-                        <a href="">{subItem}</a>
+                        <a href="" className="text-lg">
+                          {subItem}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -48,10 +54,10 @@ const NavBar = ({ data, subData }: Props) => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost icono_nav">Innovaciones Nidi</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-lg">
             {data.map((item) => (
               <li key={item}>
                 <a href="">{item}</a>
@@ -60,7 +66,7 @@ const NavBar = ({ data, subData }: Props) => {
             <li>
               <details>
                 <summary>Servicios</summary>
-                <ul className="p-2">
+                <ul className=" bg-base-100 rounded text-white">
                   {subData.map((subItem) => (
                     <li key={subItem}>
                       <a href="">{subItem}</a>
@@ -71,8 +77,36 @@ const NavBar = ({ data, subData }: Props) => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end flex gap-2 pe-2">
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-primary text-lg m-1"
+            >
+              <i className="fa-regular fa-person-to-portal" />
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-gray-200 rounded z-[1] w-52 p-2 shadow gap-2"
+            >
+              <li>
+                <a className="btn btn-sm btn-outline btn-primary text-lg">
+                  Iniciar Sesion
+                </a>
+              </li>
+              <li>
+                <a className="btn btn-sm btn-outline btn-primary text-lg">
+                  Registrarse
+                </a>
+              </li>
+              <li>
+                <a className="btn btn-sm btn-outline btn-primary text-lg">
+                  <i className="fa-regular fa-right-from-bracket"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>

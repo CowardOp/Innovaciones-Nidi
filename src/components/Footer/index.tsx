@@ -1,7 +1,9 @@
+import "./footer.css";
+
 const Footer = () => {
   return (
     <>
-      <footer className="footer bg-base-300 text-base-content p-10">
+      <footer className="footer bg-base-300 text-base-content p-10 bottom-0">
         <nav>
           <h6 className="footer-title">Servicios</h6>
           <a className="link link-hover">Color</a>

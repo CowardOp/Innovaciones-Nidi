@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Qwigley&display=swap");
+
+.icono_nav {
+  display: flex;
+  align-items: center;
+  font-family: "Qwigley", cursive;
+  text-align: right;
+  font-size: 3rem !important;
+  line-height: 0;
+  font-weight: 400 !important;
+}
+
+.menu {
+  line-height: 0;
+}
+
+.navbar {
+  padding: 0 !important;
+}

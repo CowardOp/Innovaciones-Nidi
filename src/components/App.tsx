@@ -1,5 +1,5 @@
 import { NavBar } from "./NavBar";
-// import { Footer } from "./Footer";
+import { Footer } from "./Footer";
 import { Main } from "./Main";
 import "./App.css";
 
@@ -18,7 +18,7 @@ function App() {
     <>
       <NavBar data={list} subData={subList} />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
