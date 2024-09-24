@@ -1,5 +1,4 @@
 import Aside from "../Aside/index.";
-import Flower from "../Flower/Flower";
 import "./main.css";
 const Main = () => {
   const list = ["Corte", "Peinados", "Color", "Manicure"];
@@ -13,7 +12,6 @@ const Main = () => {
     <>
       <Aside data={list} clase={classList} />
 
-      <Flower />
       <div className="h-screen"></div>
     </>
   );
